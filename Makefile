@@ -10,7 +10,6 @@ all:
 .PHONY: install
 install:
 	groupadd --system huawei-wmi || true
-	useradd --system --gid huawei-wmi huawei-wmi || true
 	mkdir --parents --mode=02775 $(ETC)
 	chgrp huawei-wmi $(ETC)
 	{ cat $(SYS)charge_thresholds || echo 0 100; } > $(ETC)charge_thresholds
@@ -31,7 +30,7 @@ uninstall:
 	rm --force $(SYSTEMD)huawei-wmi-reinstate.service
 	rm --force $(ETC)charge_thresholds
 	rmdir $(ETC) || true
-	userdel huawei-wmi || true
+	groupdel huawei-wmi || true
 
 .PHONY: off
 off:

@@ -4,7 +4,7 @@ After=huawei-wmi-privilege.service hibernate.target hybrid-sleep.target
 
 [Service]
 Type=oneshot
-User=huawei-wmi
+User=nobody
 Group=huawei-wmi
 Environment=ETC=/etc/default/huawei-wmi
 Environment=SYS=/sys/devices/platform/huawei-wmi
