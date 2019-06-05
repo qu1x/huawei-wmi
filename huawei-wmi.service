@@ -7,7 +7,7 @@ After=hibernate.target hybrid-sleep.target
 Type=oneshot
 Environment=ETC=/etc/default/huawei-wmi
 Environment=SYS=/sys/devices/platform/huawei-wmi
-ExecStart=groupadd --system --force huawei-wmi
+ExecStart=sh -c 'groupadd --system huawei-wmi 2> /dev/null || true'
 ExecStart=chgrp huawei-wmi ${SYS}/charge_thresholds ${SYS}/fn_lock_state
 ExecStart=chmod g=u ${SYS}/charge_thresholds ${SYS}/fn_lock_state
 ExecStart=mkdir --parents --mode=02775 ${ETC}
