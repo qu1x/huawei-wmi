@@ -1,0 +1,14 @@
+Source: huawei-wmi
+Standards-Version: 4.3.0.3
+Section: misc
+Priority: optional
+Build-Depends: debhelper (>= 10), po-debconf (>= 1)
+Maintainer: Rouven Spreckels <n3vu0r@qu1x.org>
+
+Package: huawei-wmi
+Section: misc
+Priority: optional
+Architecture: all
+Depends: ${misc:Depends}
+Description: Huawei WMI Privilege & Reinstate
+ Sets group write privileges and reinstates battery charge-thresholds.

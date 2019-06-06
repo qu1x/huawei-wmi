@@ -1,0 +1,13 @@
+#! /bin/sh -e
+
+ETC=/etc/default/huawei-wmi
+SYS=/sys/devices/platform/huawei-wmi
+
+groupadd --system huawei-wmi 2> /dev/null || true
+mkdir --parents --mode=02775 $ETC
+chgrp huawei-wmi $ETC
+echo 0 100 > $ETC/charge_thresholds
+cat $SYS/charge_thresholds > $ETC/charge_thresholds 2> /dev/null || true
+chmod g=u $ETC/charge_thresholds
+
+#DEBHELPER#

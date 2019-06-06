@@ -1,0 +1,2 @@
+README.md etc/default/huawei-wmi
+10-huawei-wmi.rules lib/udev/rules.d

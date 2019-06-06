@@ -1,0 +1,93 @@
+# Translations for package configuration.
+# Copyright (C) 2019 Rouven Spreckels <n3vu0r@qu1x.org>
+# This file is distributed under the same license as the huawei-wmi package.
+# Rouven Spreckels <n3vu0r@qu1x.org>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: huawei-wmi\n"
+"Report-Msgid-Bugs-To: huawei-wmi@packages.debian.org\n"
+"POT-Creation-Date: 2019-06-06 20:39+0200\n"
+"PO-Revision-Date: 2019-06-06 20:39+0200\n"
+"Last-Translator: Rouven Spreckels <n3vu0r@qu1x.org>\n"
+"Language-Team: Rouven Spreckels <n3vu0r@qu1x.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: string
+#. Description
+#: ../templates:1001
+msgid "List of users separated by space:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../templates:1001
+msgid ""
+"Please list the users who are allowed to change WMI settings, such as the "
+"battery charge-thresholds and the Fn-lock state. You probably want to list "
+"your desktop users."
+msgstr ""
+
+#. Type: string
+#. Description-de
+#: ../templates:1002
+msgid "Durch Leerzeichen getrennte Liste von Benutzern:"
+msgstr ""
+
+#. Type: string
+#. Description-de
+#: ../templates:1002
+msgid ""
+"Bitte listen Sie Benutzer auf, die WMI-Einstellungen wie "
+"Batterieladeschwellen und Fn-Einrastezustand ändern dürfen. Sie möchten "
+"wahrscheinlich Ihre Desktop-Benuter auflisten."
+msgstr ""
+
+#. Type: string
+#. Description-es
+#: ../templates:1003
+msgid "Lista de usuarios separados por espacio:"
+msgstr ""
+
+#. Type: string
+#. Description-es
+#: ../templates:1003
+msgid ""
+"Enumere los usuarios que tienen permiso para cambiar la configuración de "
+"WMI. Por ejemplo, los umbrales de carga de la batería y el estado de bloqueo "
+"Fn. Probablemente quieras listar tus usuarios de escritorio."
+msgstr ""
+
+#. Type: string
+#. Description-it
+#: ../templates:1004
+msgid "Elenco di utenti separati da spazi:"
+msgstr ""
+
+#. Type: string
+#. Description-it
+#: ../templates:1004
+msgid ""
+"Si prega di elencare gli utenti che sono autorizzati a modificare le "
+"impostazioni WMI. Ad esempio, le soglie di carica della batteria e lo stato "
+"di blocco Fn. Probabilmente vuoi elencare i tuoi utenti desktop."
+msgstr ""
+
+#. Type: string
+#. Description-nl
+#: ../templates:1005
+msgid "Lijst van gebruikers gescheiden door spatie:"
+msgstr ""
+
+#. Type: string
+#. Description-nl
+#: ../templates:1005
+msgid ""
+"Geef een lijst van gebruikers die toestemming hebben om WMI-instellingen te "
+"wijzigen, zoals de drempels voor het opladen van de batterij en de Fn-"
+"vergrendelingsstatus. U wilt waarschijnlijk uw desktopgebruikers vermelden."
+msgstr ""
