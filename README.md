@@ -1,6 +1,6 @@
 # huawei-wmi
 
-Sets group write privileges & reinstates battery charging-thresholds.
+Sets group write privileges and reinstates battery charging-thresholds.
 
 ## Debian Package
 
