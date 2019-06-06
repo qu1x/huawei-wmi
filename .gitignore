@@ -1,0 +1,14 @@
+*/debian/.debhelper/
+*/debian/debhelper-build-stamp
+*/debian/files
+*/debian/huawei-wmi.debhelper.log
+*/debian/huawei-wmi.postinst.debhelper
+*/debian/huawei-wmi.postrm.debhelper
+*/debian/huawei-wmi.prerm.debhelper
+*/debian/huawei-wmi.substvars
+*/debian/huawei-wmi/
+*.dsc
+*.tar.xz
+*_all.deb
+*_amd64.buildinfo
+*_amd64.changes
