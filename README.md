@@ -12,6 +12,6 @@ Requirements:
   * `debhelper`
 
 Create: `make`
-Install: `make install`
-Uninstall: `make uninstall`
-Reconfigure: `make reconfigure`
+Install: `sudo make install`
+Uninstall: `sudo make uninstall`
+Reconfigure: `sudo make reconfigure`

@@ -5,21 +5,32 @@ DSC := $(PKG)_$(VER).dsc
 DEB := $(PKG)_$(VER)_all.deb
 
 .PHONY: all
-all:
-	cd $(SRC) && dpkg-buildpackage --no-sign
-	lintian $(DSC)
-	lintian $(DEB)
+all: $(DEB)
 
 .PHONY: install
-install: all
+install: $(DEB)
 	dpkg -i $(DEB)
 
 .PHONY: uninstall
-install:
+uninstall:
 	dpkg -r $(PKG)
 
 .PHONY: reconfigure
 reconfigure:
-	dpkg-reconfigure $(DEB)
+	dpkg-reconfigure $(PKG)
+
+.PHONY: clean
+clean:
+	cd $(SRC) && dpkg-buildpackage --post-clean
+	rm --force *.deb
+	rm --force *.buildinfo
+	rm --force *.changes
+	rm --force *.dsc
+	rm --force *.xz
+
+$(DEB):
+	cd $(SRC) && dpkg-buildpackage --no-sign
+	lintian $(DSC)
+	lintian $(DEB)
 
 Makefile:;
