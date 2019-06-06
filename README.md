@@ -7,13 +7,21 @@ Sets group write privileges and reinstates battery charging-thresholds.
 Tested on Debian Buster.
 
 Requirements:
+
   * `build-essential`
   * `devscripts`
   * `debhelper`
 
-Create: `make`
-Install: `sudo make install`
-remove: `sudo make remove`
-Reconfigure: `sudo make reconfigure`
-Clean: `make clean`
-Distclean: `make distclean`
+Build package: `make`
+
+Install package: `sudo make install`
+
+Remove package: `sudo make remove`
+
+Reconfigure installed package: `sudo make reconfigure`
+
+Clean package directory: `make clean`
+
+Clean all: `make distclean`
+
+Translate templates: `make translate`

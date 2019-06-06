@@ -35,6 +35,10 @@ distclean: clean
 	rm --force *.dsc
 	rm --force *.xz
 
+.PHONY: translate
+translate:
+	cd $(SRC) && debconf-updatepo
+
 $(DEB): $(shell find $(SRC) | grep -vFf .gitignore)
 	cd $(SRC) && dpkg-buildpackage --no-sign
 	touch $@
