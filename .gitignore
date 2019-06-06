@@ -9,6 +9,6 @@
 */debian/huawei-wmi/
 *.dsc
 *.tar.xz
-*_all.deb
-*_amd64.buildinfo
-*_amd64.changes
+*.deb
+*.buildinfo
+*.changes
