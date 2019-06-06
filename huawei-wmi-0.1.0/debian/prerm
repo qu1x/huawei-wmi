@@ -4,5 +4,5 @@
 
 ETC=/etc/default/huawei-wmi
 
-rmdir $ETC 2> /dev/null || true
+rm $ETC/charge_thresholds 2> /dev/null || true
 groupdel huawei-wmi 2> /dev/null || true

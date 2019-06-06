@@ -17,8 +17,9 @@ SYS=/sys/devices/platform/huawei-wmi
 
 chmod g+s $ETC
 chgrp huawei-wmi $ETC
-echo 0 100 > $ETC/charge_thresholds
-cat $SYS/charge_thresholds > $ETC/charge_thresholds 2> /dev/null || true
+[ -e $ETC/charge_thresholds ] || {
+	cat $SYS/charge_thresholds 2> /dev/null || echo 0 100
+} > $ETC/charge_thresholds
 chmod g=u $ETC/charge_thresholds
 
 #DEBHELPER#
