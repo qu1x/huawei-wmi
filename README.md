@@ -15,3 +15,4 @@ Create: `make`
 Install: `sudo make install`
 Uninstall: `sudo make uninstall`
 Reconfigure: `sudo make reconfigure`
+Clean: `make clean`
