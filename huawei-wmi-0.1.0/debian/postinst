@@ -2,4 +2,23 @@
 
 . /usr/share/debconf/confmodule
 
+db_get huawei-wmi/users
+users=$RET
+db_stop
+
+groupadd --system huawei-wmi 2> /dev/null || true
+for user in $users
+do
+	usermod --append --groups huawei-wmi "$user"
+done
+
+ETC=/etc/default/huawei-wmi
+SYS=/sys/devices/platform/huawei-wmi
+
+chmod g+s $ETC
+chgrp huawei-wmi $ETC
+echo 0 100 > $ETC/charge_thresholds
+cat $SYS/charge_thresholds > $ETC/charge_thresholds 2> /dev/null || true
+chmod g=u $ETC/charge_thresholds
+
 #DEBHELPER#

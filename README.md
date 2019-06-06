@@ -13,6 +13,7 @@ Requirements:
 
 Create: `make`
 Install: `sudo make install`
-Uninstall: `sudo make uninstall`
+remove: `sudo make remove`
 Reconfigure: `sudo make reconfigure`
 Clean: `make clean`
+Distclean: `make distclean`

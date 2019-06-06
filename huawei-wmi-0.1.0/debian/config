@@ -2,14 +2,5 @@
 
 . /usr/share/debconf/confmodule
 
-db_input low huawei-wmi/users || true
+db_input high huawei-wmi/users || true
 db_go
-
-db_get huawei-wmi/users
-users=$RET
-
-groupadd --system huawei-wmi 2> /dev/null || true
-for user in $users
-do
-	usermod --append --groups huawei-wmi "$user"
-done

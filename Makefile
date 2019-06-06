@@ -9,11 +9,15 @@ all: $(DEB)
 
 .PHONY: install
 install: $(DEB)
-	dpkg -i $(DEB)
+	dpkg --install $(DEB)
 
-.PHONY: uninstall
-uninstall:
-	dpkg -r $(PKG)
+.PHONY: remove
+remove:
+	dpkg --remove $(PKG)
+
+.PHONY: purge
+purge:
+	dpkg --purge $(PKG)
 
 .PHONY: reconfigure
 reconfigure:
@@ -22,14 +26,18 @@ reconfigure:
 .PHONY: clean
 clean:
 	cd $(SRC) && dpkg-buildpackage --post-clean
+
+.PHONY: distclean
+distclean: clean
 	rm --force *.deb
 	rm --force *.buildinfo
 	rm --force *.changes
 	rm --force *.dsc
 	rm --force *.xz
 
-$(DEB):
+$(DEB): $(shell find $(SRC) | grep -vFf .gitignore)
 	cd $(SRC) && dpkg-buildpackage --no-sign
+	touch $@
 	lintian $(DSC)
 	lintian $(DEB)
 
