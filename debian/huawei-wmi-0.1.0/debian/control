@@ -10,6 +10,6 @@ Section: misc
 Priority: optional
 Architecture: all
 Depends: ${misc:Depends}
-Recommends: matebook-applet (>= 0.1)
+Recommends: matebook-applet (>= 1.3)
 Description: Huawei WMI Privilege & Reinstate
  Sets group write privileges and reinstates battery charge-thresholds.
