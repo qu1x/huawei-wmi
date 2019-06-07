@@ -9,6 +9,8 @@
 ETC := /etc/default/huawei-wmi/
 SYS := /sys/devices/platform/huawei-wmi/
 
+.DEFAULT_GOAL := all
+
 .PHONY: off
 off:
 	@echo 0 100 | tee $(ETC)charge_thresholds $(SYS)charge_thresholds
