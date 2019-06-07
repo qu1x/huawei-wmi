@@ -12,3 +12,7 @@
 *.deb
 *.buildinfo
 *.changes
+huawei-wmi-0.1.0/10-huawei-wmi.rules
+huawei-wmi-0.1.0/README.md
+huawei-wmi-0.1.0/debian/huawei-wmi-privilege.service
+huawei-wmi-0.1.0/debian/huawei-wmi-reinstate.service
