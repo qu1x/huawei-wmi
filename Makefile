@@ -25,7 +25,7 @@ reconfigure:
 
 .PHONY: clean
 clean:
-	cd $(SRC) && dpkg-buildpackage --post-clean
+	cd $(SRC) && dpkg-buildpackage --no-sign --post-clean
 
 .PHONY: distclean
 distclean: clean
