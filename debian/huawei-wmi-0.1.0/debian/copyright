@@ -1,7 +1,12 @@
-Copyright (c) 2019 Rouven Spreckels <n3vu0r@qu1x.org>
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: huawei-wmi
+Source: https://github.com/qu1x/huawei-wmi
 
-Usage of the works is permitted provided that
-this instrument is retained with the works, so that
-any entity that uses the works is notified of this instrument.
-
-DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
+Files: *
+Copyright: 2019 Rouven Spreckels <n3vu0r@qu1x.org>
+License: Fair
+ Usage of the works is permitted provided that
+ this instrument is retained with the works, so that
+ any entity that uses the works is notified of this instrument.
+ .
+ DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
