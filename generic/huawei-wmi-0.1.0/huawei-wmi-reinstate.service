@@ -1,6 +1,7 @@
 [Unit]
 Description=Huawei WMI Reinstate
-After=huawei-wmi-privilege.service hibernate.target hybrid-sleep.target
+After=huawei-wmi-privilege.service
+After=hibernate.target hybrid-sleep.target suspend-then-hibernate.target
 
 [Service]
 Type=oneshot
@@ -13,4 +14,5 @@ ExecStart=sh -c 'cat ${ETC}/charge_thresholds > ${SYS}/charge_thresholds'
 ExecStart=sh -c 'echo New charge thresholds $(cat ${SYS}/charge_thresholds)'
 
 [Install]
-WantedBy=huawei-wmi-privilege.service hibernate.target hybrid-sleep.target
+WantedBy=huawei-wmi-privilege.service
+WantedBy=hibernate.target hybrid-sleep.target suspend-then-hibernate.target
