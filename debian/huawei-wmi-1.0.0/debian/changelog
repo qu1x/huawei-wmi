@@ -1,0 +1,12 @@
+huawei-wmi (1.0.0) stable; urgency=medium
+
+  * Add `suspend-then-hibernate.target`.
+  * Add conditional delay of 1 second to recover from sysfs race condition.
+
+ -- Rouven Spreckels <n3vu0r@qu1x.org>  Tue, 02 Jul 2019 13:08:08 +0200
+
+huawei-wmi (0.1.0) testing; urgency=medium
+
+  * Initial release.
+
+ -- Rouven Spreckels <n3vu0r@qu1x.org>  Thu, 06 Jun 2019 14:11:54 +0200
