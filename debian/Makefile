@@ -8,10 +8,7 @@
 
 include ../common.mk
 
-PKG := huawei-wmi
-VER := 0.1.0
-GEN := ../generic/huawei-wmi-0.1.0/
-SRC := $(PKG)-$(VER)/
+GEN := ../generic/$(SRC)
 DSC := $(PKG)_$(VER).dsc
 DEB := $(PKG)_$(VER)_all.deb
 

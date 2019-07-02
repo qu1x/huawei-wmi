@@ -9,6 +9,10 @@
 ETC := /etc/default/huawei-wmi/
 SYS := /sys/devices/platform/huawei-wmi/
 
+PKG := huawei-wmi
+VER := 0.1.0
+SRC := $(PKG)-$(VER)/
+
 .DEFAULT_GOAL := all
 
 .PHONY: off

@@ -8,8 +8,6 @@
 
 include ../common.mk
 
-SRC := huawei-wmi-0.1.0/
-
 UDEV := /lib/udev/rules.d/
 SYSTEMD := /lib/systemd/system/
 
