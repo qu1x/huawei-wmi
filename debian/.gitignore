@@ -1,3 +1,7 @@
+*/10-huawei-wmi.rules
+*/README.md
+*/debian/huawei-wmi-privilege.service
+*/debian/huawei-wmi-reinstate.service
 */debian/.debhelper/
 */debian/debhelper-build-stamp
 */debian/files
@@ -12,7 +16,3 @@
 *.deb
 *.buildinfo
 *.changes
-huawei-wmi-0.1.0/10-huawei-wmi.rules
-huawei-wmi-0.1.0/README.md
-huawei-wmi-0.1.0/debian/huawei-wmi-privilege.service
-huawei-wmi-0.1.0/debian/huawei-wmi-reinstate.service
