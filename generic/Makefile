@@ -34,6 +34,7 @@ install: users
 	install $(SRC)huawei-wmi-privilege.service $(SYSTEMD)
 	install $(SRC)huawei-wmi-reinstate.service $(SYSTEMD)
 	systemctl daemon-reload
+	systemctl unmask huawei-wmi-privilege huawei-wmi-reinstate
 	systemctl enable huawei-wmi-privilege huawei-wmi-reinstate
 	udevadm control --reload-rules && udevadm trigger --action=add || true
 
