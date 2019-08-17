@@ -10,7 +10,7 @@ ETC := /etc/default/huawei-wmi/
 SYS := /sys/devices/platform/huawei-wmi/
 
 PKG := huawei-wmi
-VER := 1.0.0
+VER := 1.0.1
 SRC := $(PKG)-$(VER)/
 
 .DEFAULT_GOAL := all

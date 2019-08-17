@@ -1,0 +1,13 @@
+[Unit]
+Description=Huawei WMI Privilege
+After=sys-devices-platform-huawei\x2dwmi.device
+
+[Service]
+Type=oneshot
+Environment=SYS=/sys/devices/platform/huawei-wmi
+ExecStart=/bin/sh -c '[ -e ${SYS}/charge_thresholds -a -e ${SYS}/fn_lock_state ] || sleep 1'
+ExecStart=/bin/chgrp huawei-wmi ${SYS}/charge_thresholds ${SYS}/fn_lock_state
+ExecStart=/bin/chmod g=u ${SYS}/charge_thresholds ${SYS}/fn_lock_state
+
+[Install]
+WantedBy=sys-devices-platform-huawei\x2dwmi.device

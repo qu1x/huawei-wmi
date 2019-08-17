@@ -1,3 +1,9 @@
+huawei-wmi (1.0.1) stable; urgency=medium
+
+  * Use absolute paths within systemd units supporting systemd prior to 239.
+
+ -- Rouven Spreckels <n3vu0r@qu1x.org>  Sat, 17 Aug 2019 10:37:41 +0200
+
 huawei-wmi (1.0.0) stable; urgency=medium
 
   * Add `suspend-then-hibernate.target`.
