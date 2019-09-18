@@ -6,35 +6,38 @@
 #
 # DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
 
-ETC := /etc/default/huawei-wmi/
-SYS := /sys/devices/platform/huawei-wmi/
+DEF := /etc/default/huawei-wmi/
+WMI := /sys/devices/platform/huawei-wmi/
+
+CCT := charge*_thresholds
+FLS := fn_lock_state
 
 PKG := huawei-wmi
-VER := 1.0.1
+VER := 1.1.0
 SRC := $(PKG)-$(VER)/
 
 .DEFAULT_GOAL := all
 
 .PHONY: off
 off:
-	@echo 0 100 | tee $(ETC)charge_thresholds $(SYS)charge_thresholds
+	@echo 0 100 | tee $(DEF)$(CCT) $(WMI)$(CCT)
 
 .PHONY: travel
 travel:
-	@echo 95 100 | tee $(ETC)charge_thresholds $(SYS)charge_thresholds
+	@echo 95 100 | tee $(DEF)$(CCT) $(WMI)$(CCT)
 
 .PHONY: office
 office:
-	@echo 70 90 | tee $(ETC)charge_thresholds $(SYS)charge_thresholds
+	@echo 70 90 | tee $(DEF)$(CCT) $(WMI)$(CCT)
 
 .PHONY: home
 home:
-	@echo 40 70 | tee $(ETC)charge_thresholds $(SYS)charge_thresholds
+	@echo 40 70 | tee $(DEF)$(CCT) $(WMI)$(CCT)
 
 .PHONY: lock
 lock:
-	@echo 0 | tee $(SYS)fn_lock_state
+	@echo 0 | tee $(WMI)$(FLS)
 
 .PHONY: unlock
 unlock:
-	@echo 1 | tee $(SYS)fn_lock_state
+	@echo 1 | tee $(WMI)$(FLS)

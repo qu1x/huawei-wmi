@@ -34,10 +34,10 @@ reconfigure:
 .PHONY: clean
 clean:
 	cd $(SRC) && dpkg-buildpackage --no-sign --post-clean
-	rm --force $(CPY)
 
 .PHONY: distclean
 distclean: clean
+	rm --force $(CPY)
 	rm --force *.deb
 	rm --force *.buildinfo
 	rm --force *.changes
@@ -48,19 +48,18 @@ distclean: clean
 translate:
 	cd $(SRC) && debconf-updatepo
 
-CPY := $(SRC)README.md
-CPY += $(SRC)10-huawei-wmi.rules
+CPY := $(SRC)10-huawei-wmi.rules
 CPY += $(SRC)debian/huawei-wmi-privilege.service
 CPY += $(SRC)debian/huawei-wmi-reinstate.service
+CPY += $(SRC)constants
+CPY += $(SRC)privilege
+CPY += $(SRC)reinstate
 
 $(DEB): $(CPY) $(shell find $(SRC) | grep -vFf .gitignore)
 	cd $(SRC) && dpkg-buildpackage --no-sign
 	touch $@
 	lintian $(DSC)
 	lintian $(DEB)
-
-$(SRC)README.md: $(GEN)README.md
-	cp -a $< $@
 
 $(SRC)10-huawei-wmi.rules: $(GEN)10-huawei-wmi.rules
 	cp -a $< $@
@@ -69,6 +68,15 @@ $(SRC)debian/huawei-wmi-privilege.service: $(GEN)huawei-wmi-privilege.service
 	cp -a $< $@
 
 $(SRC)debian/huawei-wmi-reinstate.service: $(GEN)huawei-wmi-reinstate.service
+	cp -a $< $@
+
+$(SRC)constants: $(GEN)constants
+	cp -a $< $@
+
+$(SRC)privilege: $(GEN)privilege
+	cp -a $< $@
+
+$(SRC)reinstate: $(GEN)reinstate
 	cp -a $< $@
 
 Makefile:;

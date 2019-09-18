@@ -1,0 +1,20 @@
+#! /bin/sh -e
+
+. /usr/share/debconf/confmodule
+
+db_get huawei-wmi/users
+users=$RET
+db_stop
+
+groupadd --system huawei-wmi 2> /dev/null || true
+for user in $users
+do
+	usermod --append --groups huawei-wmi "$user"
+done
+
+DEF=/etc/default/huawei-wmi/
+
+chmod g+s $DEF
+chgrp huawei-wmi $DEF
+
+#DEBHELPER#

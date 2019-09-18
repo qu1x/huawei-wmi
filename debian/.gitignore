@@ -1,5 +1,7 @@
 */10-huawei-wmi.rules
-*/README.md
+*/constants
+*/privilege
+*/reinstate
 */debian/huawei-wmi-privilege.service
 */debian/huawei-wmi-reinstate.service
 */debian/.debhelper/

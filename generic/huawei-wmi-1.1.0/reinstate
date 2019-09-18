@@ -1,0 +1,7 @@
+#! /bin/sh -e
+
+. /usr/lib/huawei-wmi/constants
+
+echo Old charge control thresholds $(cat $WMI$CCT)
+cp $DEF$CCT $WMI
+echo New charge control thresholds $(cat $WMI$CCT)

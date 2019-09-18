@@ -10,6 +10,7 @@ include ../common.mk
 
 UDEV := /lib/udev/rules.d/
 SYSTEMD := /lib/systemd/system/
+LIB := /usr/lib/huawei-wmi/
 
 SHELL := /bin/sh
 
@@ -22,17 +23,16 @@ install: users
 	for user in $$(cat $<); do \
 		usermod --append --groups huawei-wmi "$$user"; \
 	done
-	install -d $(ETC)
-	install $(SRC)README.md $(ETC)
-	chmod g+s $(ETC)
-	chgrp huawei-wmi $(ETC)
-	[ -e $(ETC)/charge_thresholds ] || { \
-		cat $(SYS)/charge_thresholds 2> /dev/null || echo 0 100; \
-	} > $(ETC)/charge_thresholds
-	chmod g=u $(ETC)charge_thresholds
+	install -d $(DEF)
+	chmod g+s $(DEF)
+	chgrp huawei-wmi $(DEF)
 	install $(SRC)10-huawei-wmi.rules $(UDEV)
 	install $(SRC)huawei-wmi-privilege.service $(SYSTEMD)
 	install $(SRC)huawei-wmi-reinstate.service $(SYSTEMD)
+	install -d $(LIB)
+	install $(SRC)constants $(LIB)
+	install $(SRC)privilege $(LIB)
+	install $(SRC)reinstate $(LIB)
 	systemctl daemon-reload
 	systemctl unmask huawei-wmi-privilege huawei-wmi-reinstate
 	systemctl enable huawei-wmi-privilege huawei-wmi-reinstate
@@ -51,12 +51,15 @@ users:
 .PHONY: remove
 remove:
 	systemctl disable huawei-wmi-reinstate huawei-wmi-privilege || true
-	rm --force $(ETC)README.md
-	rm --force $(ETC)charge_thresholds
-	rmdir $(ETC) || true
+	rm --force $(DEF)$(CCT)
+	rmdir $(DEF) || true
 	rm --force $(UDEV)10-huawei-wmi.rules
 	rm --force $(SYSTEMD)huawei-wmi-privilege.service
 	rm --force $(SYSTEMD)huawei-wmi-reinstate.service
+	rm --force $(LIB)constants
+	rm --force $(LIB)privilege
+	rm --force $(LIB)reinstate
+	rmdir $(LIB) || true
 	groupdel huawei-wmi || true
 
 .PHONY: clean

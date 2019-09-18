@@ -1,0 +1,4 @@
+10-huawei-wmi.rules lib/udev/rules.d
+constants usr/lib/huawei-wmi
+privilege usr/lib/huawei-wmi
+reinstate usr/lib/huawei-wmi

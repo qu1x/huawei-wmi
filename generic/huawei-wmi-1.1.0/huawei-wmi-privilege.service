@@ -1,0 +1,10 @@
+[Unit]
+Description=Huawei WMI Privilege
+After=sys-devices-platform-huawei\x2dwmi.device
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/huawei-wmi/privilege
+
+[Install]
+WantedBy=sys-devices-platform-huawei\x2dwmi.device
