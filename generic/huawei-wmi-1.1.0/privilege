@@ -11,10 +11,11 @@
 
 if [ -e $DEF$CCT ]
 then
-	def_cct=$(basename $DEF$CCT)
 	wmi_cct=$(basename $WMI$CCT)
-
-	[ "$def_cct" = "$wmi_cct" ] || mv $DEF$CCT $DEF"$wmi_cct"
+	for def_cct in $DEF$CCT
+	do
+		[ $(basename $def_cct) = $wmi_cct ] || mv --force $def_cct $DEF$wmi_cct
+	done
 else
 	cp $WMI$CCT $DEF
 	chmod g=u $DEF$CCT

@@ -1,0 +1,13 @@
+#! /bin/sh -e
+
+#DEBHELPER#
+
+DEF=/etc/default/huawei-wmi/
+CCT=charge*_thresholds
+
+if [ "$1" = purge ]
+then
+	rm --force $DEF$CCT
+	rmdir $DEF 2> /dev/null || true
+	groupdel huawei-wmi 2> /dev/null || true
+fi

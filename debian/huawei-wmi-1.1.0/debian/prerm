@@ -1,8 +1,0 @@
-#! /bin/sh -e
-
-#DEBHELPER#
-
-ETC=/etc/default/huawei-wmi
-
-rm $ETC/charge_thresholds 2> /dev/null || true
-groupdel huawei-wmi 2> /dev/null || true

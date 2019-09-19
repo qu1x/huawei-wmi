@@ -3,6 +3,7 @@ huawei-wmi (1.1.0) stable; urgency=medium
   * Add backwards-compatible support for next-gen driver.
   * Move shell commands of systemd units to scripts in `/usr/lib/huawei-wmi`.
   * Remove non-conffile `/etc/default/huawei-wmi/README.md`.
+  * Keep conffile and group until purge instead of removal.
 
  -- Rouven Spreckels <n3vu0r@qu1x.org>  Wed, 18 Sep 2019 23:11:51 +0200
 
