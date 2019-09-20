@@ -4,7 +4,7 @@ DEF=/etc/default/huawei-wmi/
 
 if [ "$1" = upgrade ]
 then
-	rm --force ${DEF}README.md
+	rm --force -- "${DEF}README.md"
 fi
 
 #DEBHELPER#

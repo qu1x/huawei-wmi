@@ -1,5 +1,5 @@
 */10-huawei-wmi.rules
-*/constants
+*/available
 */privilege
 */reinstate
 */debian/huawei-wmi-privilege.service

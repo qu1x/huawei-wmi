@@ -13,11 +13,12 @@ then
 	groupadd --system huawei-wmi 2> /dev/null || true
 	for user in $users
 	do
-		usermod --append --groups huawei-wmi "$user"
+		usermod --append --groups huawei-wmi -- "$user"
 	done
 
-	mkdir --parents --mode=02775 $DEF
-	chgrp huawei-wmi $DEF
+	mkdir --parents "$DEF"
+	chmod g+s "$DEF"
+	chgrp huawei-wmi "$DEF"
 fi
 
 #DEBHELPER#

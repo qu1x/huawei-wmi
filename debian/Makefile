@@ -51,7 +51,7 @@ translate:
 CPY := $(SRC)10-huawei-wmi.rules
 CPY += $(SRC)debian/huawei-wmi-privilege.service
 CPY += $(SRC)debian/huawei-wmi-reinstate.service
-CPY += $(SRC)constants
+CPY += $(SRC)available
 CPY += $(SRC)privilege
 CPY += $(SRC)reinstate
 
@@ -62,21 +62,21 @@ $(DEB): $(CPY) $(shell find $(SRC) | grep -vFf .gitignore)
 	lintian $(DEB)
 
 $(SRC)10-huawei-wmi.rules: $(GEN)10-huawei-wmi.rules
-	cp -a $< $@
+	cp --archive $< $@
 
 $(SRC)debian/huawei-wmi-privilege.service: $(GEN)huawei-wmi-privilege.service
-	cp -a $< $@
+	cp --archive $< $@
 
 $(SRC)debian/huawei-wmi-reinstate.service: $(GEN)huawei-wmi-reinstate.service
-	cp -a $< $@
+	cp --archive $< $@
 
-$(SRC)constants: $(GEN)constants
-	cp -a $< $@
+$(SRC)available: $(GEN)available
+	cp --archive $< $@
 
 $(SRC)privilege: $(GEN)privilege
-	cp -a $< $@
+	cp --archive $< $@
 
 $(SRC)reinstate: $(GEN)reinstate
-	cp -a $< $@
+	cp --archive $< $@
 
 Makefile:;

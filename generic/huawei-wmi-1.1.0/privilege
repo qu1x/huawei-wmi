@@ -1,25 +1,11 @@
 #! /bin/sh -e
 
-. /usr/lib/huawei-wmi/constants
+. /usr/lib/huawei-wmi/available
 
-[ -e $WMI$CCT -a -e $WMI$FLS ] || sleep 1
+[ -e "$DEF$dct" ] && mv --force -- "$DEF$dct" "$DEF$cct"
 
-[ -e $WMI$CCT -a -e $WMI$FLS ] || {
-	echo >&2 "No Huawei WMI available"
-	exit 1
-}
+[ -e "$DEF$cct" ] || cp -- "$WMI$cct" "$DEF"
+chmod g=u -- "$DEF$cct"
 
-if [ -e $DEF$CCT ]
-then
-	wmi_cct=$(basename $WMI$CCT)
-	for def_cct in $DEF$CCT
-	do
-		[ $(basename $def_cct) = $wmi_cct ] || mv --force $def_cct $DEF$wmi_cct
-	done
-else
-	cp $WMI$CCT $DEF
-	chmod g=u $DEF$CCT
-fi
-
-chgrp huawei-wmi $WMI$CCT $WMI$FLS
-chmod g=u $WMI$CCT $WMI$FLS
+chgrp huawei-wmi -- "$WMI$cct" "$WMI$FLS"
+chmod g=u -- "$WMI$cct" "$WMI$FLS"

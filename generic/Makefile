@@ -21,7 +21,7 @@ all:
 install: users
 	groupadd --system huawei-wmi 2> /dev/null || true
 	for user in $$(cat $<); do \
-		usermod --append --groups huawei-wmi "$$user"; \
+		usermod --append --groups huawei-wmi -- "$$user"; \
 	done
 	install -d $(DEF)
 	chmod g+s $(DEF)
@@ -30,7 +30,7 @@ install: users
 	install $(SRC)huawei-wmi-privilege.service $(SYSTEMD)
 	install $(SRC)huawei-wmi-reinstate.service $(SYSTEMD)
 	install -d $(LIB)
-	install $(SRC)constants $(LIB)
+	install $(SRC)available $(LIB)
 	install $(SRC)privilege $(LIB)
 	install $(SRC)reinstate $(LIB)
 	systemctl daemon-reload
@@ -56,7 +56,7 @@ remove:
 	rm --force $(UDEV)10-huawei-wmi.rules
 	rm --force $(SYSTEMD)huawei-wmi-privilege.service
 	rm --force $(SYSTEMD)huawei-wmi-reinstate.service
-	rm --force $(LIB)constants
+	rm --force $(LIB)available
 	rm --force $(LIB)privilege
 	rm --force $(LIB)reinstate
 	rmdir $(LIB) || true

@@ -1,9 +1,0 @@
-#! /bin/sh -e
-
-readonly DEF=/etc/default/huawei-wmi/
-readonly WMI=/sys/devices/platform/huawei-wmi/
-
-readonly CCT=charge*_thresholds
-readonly FLS=fn_lock_state
-
-export DEF WMI CCT FLS
