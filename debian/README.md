@@ -10,29 +10,19 @@ Tested on Debian Buster.
 
 ```sh
 echo "deb https://deb.qu1x.org buster main" | sudo tee /etc/apt/sources.list.d/qu1x.list
-sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 4503D1AB
+sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 4503d1ab
 sudo apt update
 sudo apt install huawei-wmi
 ```
 
 ### Build
 
-Requirements:
+Requires `build-essential devscripts debhelper`.
 
-  * `build-essential`
-  * `devscripts`
-  * `debhelper`
-
-Build package: `make`
-
-Install package: `sudo make install`
-
-Remove package: `sudo make remove`
-
-Reconfigure installed package: `sudo make reconfigure`
-
-Clean package directory: `make clean`
-
-Clean all: `make distclean`
-
-Translate templates: `make translate`
+  * Build package: `make`
+  * Install package: `sudo make install`
+  * Remove package: `sudo make remove`
+  * Reconfigure installed package: `sudo make reconfigure`
+  * Clean package directory: `make clean`
+  * Clean all: `make distclean`
+  * Translate templates: `make translate`

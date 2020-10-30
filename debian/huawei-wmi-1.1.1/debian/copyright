@@ -3,7 +3,7 @@ Upstream-Name: huawei-wmi
 Source: https://github.com/qu1x/huawei-wmi
 
 Files: *
-Copyright: 2019 Rouven Spreckels <n3vu0r@qu1x.org>
+Copyright: 2019, 2020 Rouven Spreckels <rs@qu1x.dev>
 License: Fair
  Usage of the works is permitted provided that
  this instrument is retained with the works, so that

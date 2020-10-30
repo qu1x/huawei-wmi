@@ -3,7 +3,7 @@ Standards-Version: 4.3.0.3
 Section: misc
 Priority: optional
 Build-Depends: debhelper (>= 10), po-debconf (>= 1)
-Maintainer: Rouven Spreckels <n3vu0r@qu1x.org>
+Maintainer: Rouven Spreckels <rs@qu1x.dev>
 
 Package: huawei-wmi
 Section: misc

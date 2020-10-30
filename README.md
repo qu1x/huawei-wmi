@@ -16,3 +16,15 @@ Requires the [Huawei WMI Driver]. Used by the [MateBook Applet]. See the great
 ## Packages
 
 [Debian](debian)
+
+## License
+
+Licensed under [Fair].
+
+[Fair]: https://opensource.org/licenses/Fair
+
+## Contribution
+
+Unless you explicitly state otherwise, any contribution intentionally submitted
+for inclusion in the works by you shall be licensed as above, without any
+additional terms or conditions.

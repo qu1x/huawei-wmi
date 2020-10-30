@@ -1,11 +1,3 @@
-# Copyright (c) 2019 Rouven Spreckels <n3vu0r@qu1x.org>
-#
-# Usage of the works is permitted provided that
-# this instrument is retained with the works, so that
-# any entity that uses the works is notified of this instrument.
-#
-# DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
-
 include ../common.mk
 
 UDEV := /lib/udev/rules.d/

@@ -1,3 +1,9 @@
+huawei-wmi (1.1.1) stable; urgency=low
+
+  * Update author's information.
+
+ -- Rouven Spreckels <rs@qu1x.dev>  Fri, 30 Oct 2020 10:59:57 +0100
+
 huawei-wmi (1.1.0) stable; urgency=medium
 
   * Add backwards-compatible support for next-gen driver.

@@ -1,11 +1,3 @@
-# Copyright (c) 2019 Rouven Spreckels <n3vu0r@qu1x.org>
-#
-# Usage of the works is permitted provided that
-# this instrument is retained with the works, so that
-# any entity that uses the works is notified of this instrument.
-#
-# DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
-
 DEF := /etc/default/huawei-wmi/
 WMI := /sys/devices/platform/huawei-wmi/
 
@@ -13,7 +5,7 @@ CCT := charge*_thresholds
 FLS := fn_lock_state
 
 PKG := huawei-wmi
-VER := 1.1.0
+VER := 1.1.1
 SRC := $(PKG)-$(VER)/
 
 .DEFAULT_GOAL := all
