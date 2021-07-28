@@ -1,0 +1,11 @@
+#! /bin/sh -e
+
+. /usr/lib/huawei-wmi/available
+
+[ -e "$DEF$dct" ] && mv --force -- "$DEF$dct" "$DEF$cct"
+
+[ -e "$DEF$cct" ] || cp -- "$WMI$cct" "$DEF"
+chmod g=u -- "$DEF$cct"
+
+chgrp huawei-wmi -- "$WMI$cct" "$WMI$FLS"
+chmod g=u -- "$WMI$cct" "$WMI$FLS"
