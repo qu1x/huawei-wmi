@@ -11,11 +11,14 @@ Requires the [Huawei WMI Driver]. Used by the [MateBook Applet]. See the great
 
 ## Makefile
 
-[Generic](generic)
+  * [Generic](generic)
 
 ## Packages
 
-[Debian](debian)
+  * [Debian](debian)
+  * [Arch Linux](archlinux) maintained by [Egor Vorontsov]
+
+[Egor Vorontsov]: https://github.com/egormanga
 
 ## License
 
