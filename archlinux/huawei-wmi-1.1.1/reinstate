@@ -1,7 +1,0 @@
-#! /bin/sh -e
-
-. /usr/lib/huawei-wmi/available
-
-echo Old battery charge-thresholds "$(cat -- "$WMI$cct")"
-cp -- "$DEF$cct" "$WMI"
-echo New battery charge-thresholds "$(cat -- "$WMI$cct")"
