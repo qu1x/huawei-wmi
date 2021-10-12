@@ -1,7 +1,7 @@
 pkgbase = huawei-wmi
 	pkgdesc = Sets group write privileges and reinstates battery charge-thresholds.
 	pkgver = 1.1.1
-	pkgrel = 2
+	pkgrel = 3
 	url = https://github.com/qu1x/huawei-wmi
 	install = huawei-wmi.install
 	arch = any
