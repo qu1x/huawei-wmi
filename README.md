@@ -16,8 +16,9 @@ Requires the [Huawei WMI Driver]. Used by the [MateBook Applet]. See the great
 ## Packages
 
   * [Debian](debian)
-  * [Arch Linux](archlinux) maintained by [Egor Vorontsov]
+  * [Arch Linux](archlinux) published on [AUR] by [Egor Vorontsov]
 
+[AUR]: https://aur.archlinux.org/packages/huawei-wmi
 [Egor Vorontsov]: https://github.com/egormanga
 
 ## License
