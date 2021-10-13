@@ -1,3 +1,9 @@
+huawei-wmi (1.1.2) stable; urgency=low
+
+  * Add license file.
+
+ -- Rouven Spreckels <rs@qu1x.dev>  Wed, 13 Oct 2021 10:11:51 +0200
+
 huawei-wmi (1.1.1) stable; urgency=low
 
   * Update author's information.

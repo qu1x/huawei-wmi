@@ -5,7 +5,7 @@ CCT := charge*_thresholds
 FLS := fn_lock_state
 
 PKG := huawei-wmi
-VER := 1.1.1
+VER := 1.1.2
 SRC := $(PKG)-$(VER)/
 
 .DEFAULT_GOAL := all
