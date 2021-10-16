@@ -5,7 +5,7 @@ After=hibernate.target hybrid-sleep.target suspend-then-hibernate.target
 
 [Service]
 Type=oneshot
-User=nobody
+DynamicUser=yes
 Group=huawei-wmi
 ExecStart=/usr/lib/huawei-wmi/reinstate
 
