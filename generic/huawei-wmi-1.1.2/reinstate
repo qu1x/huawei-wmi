@@ -5,3 +5,7 @@
 echo Old battery charge-thresholds "$(cat -- "$WMI$cct")"
 cp -- "$DEF$cct" "$WMI"
 echo New battery charge-thresholds "$(cat -- "$WMI$cct")"
+
+echo Old keyboard backlight timeout "$(cat -- $WMI$KBD)"
+cp -- "$DEF$KBD" "$WMI"
+echo New keyboard backlight timeout "$(cat -- $WMI$KBD)"
