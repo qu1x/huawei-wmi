@@ -6,6 +6,7 @@ readonly WMI=/sys/devices/platform/huawei-wmi/
 readonly CCT=charge_control_thresholds
 readonly DCT=charge_thresholds
 readonly FLS=fn_lock_state
+readonly KBD=kbdlight_timeout
 
 available() {
 	[ \( -e "$WMI$CCT" -o -e "$WMI$DCT" \) -a -e "$WMI$FLS" ]
@@ -17,10 +18,8 @@ available || {
 	exit 1
 }
 
-for wmi_xct in "$WMI$CCT" "$WMI$DCT"
-do
-	if [ -e "$wmi_xct" ]
-	then
+for wmi_xct in "$WMI$CCT" "$WMI$DCT"; do
+	if [ -e "$wmi_xct" ]; then
 		readonly cct=$(basename "$wmi_xct")
 	else
 		readonly dct=$(basename "$wmi_xct")
