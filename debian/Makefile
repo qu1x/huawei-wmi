@@ -25,7 +25,7 @@ reconfigure:
 
 .PHONY: clean
 clean:
-	cd $(SRC) && dpkg-buildpackage --no-sign --post-clean
+	+cd $(SRC) && dpkg-buildpackage --no-sign --post-clean
 
 .PHONY: distclean
 distclean: clean
@@ -48,7 +48,7 @@ CPY += $(SRC)privilege
 CPY += $(SRC)reinstate
 
 $(DEB): $(CPY) $(shell find $(SRC) | grep -vFf .gitignore)
-	cd $(SRC) && dpkg-buildpackage --no-sign
+	+cd $(SRC) && dpkg-buildpackage --no-sign
 	touch $@
 	lintian $(DSC)
 	lintian $(DEB)
