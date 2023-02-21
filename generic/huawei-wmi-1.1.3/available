@@ -7,6 +7,7 @@ readonly CCT=charge_control_thresholds
 readonly DCT=charge_thresholds
 readonly FLS=fn_lock_state
 readonly KLT=kbdlight_timeout
+readonly PUL=power_unlock
 
 available() {
 	[ \( -e "$WMI$CCT" -o -e "$WMI$DCT" \) -a -e "$WMI$FLS" ]
