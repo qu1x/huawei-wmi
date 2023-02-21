@@ -12,12 +12,18 @@ chmod g=u -- "$WMI$cct" "$WMI$FLS"
 
 if [ -e "$WMI$KLT" ]
 then
+	[ -e "$DEF$KLT" ] || cp -- "$WMI$KLT" "$DEF"
+	chmod g=u -- "$DEF$KLT"
+
 	chgrp huawei-wmi -- "$WMI$KLT"
 	chmod g=u -- "$WMI$KLT"
 fi
 
 if [ -e "$WMI$PUL" ]
 then
+	[ -e "$DEF$PUL" ] || cp -- "$WMI$PUL" "$DEF"
+	chmod g=u -- "$DEF$PUL"
+
 	chgrp huawei-wmi -- "$WMI$PUL"
 	chmod g=u -- "$WMI$PUL"
 fi
