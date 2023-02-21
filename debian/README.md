@@ -14,7 +14,7 @@ export keys=/usr/share/keyrings/qu1x-dev-archive-keyring.gpg
 export list=/etc/apt/sources.list.d/qu1x-dev.list
 
 printf "# Qu1x Deb\ndeb [signed-by=$keys] $repo\ndeb-src [signed-by=$keys] $repo\n" | sudo tee $list
-curl https://qu1x.dev/file/keyring.gpg | sudo tee $keys
+sudo curl -o $keys https://qu1x.dev/file/keyring.gpg
 
 sudo apt update
 sudo apt install huawei-wmi
