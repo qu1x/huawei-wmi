@@ -4,15 +4,26 @@ Sets group write privileges and reinstates battery charge-thresholds.
 
 ## Debian Package
 
-Tested on Debian Buster.
+Tested on Debian Bullseye.
 
 ### Repository
 
 ```sh
-echo "deb https://deb.qu1x.org buster main" | sudo tee /etc/apt/sources.list.d/qu1x.list
-sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 4503d1ab
+export repo='https://deb.qu1x.dev bullseye main'
+export keys=/usr/share/keyrings/qu1x-dev-archive-keyring.gpg
+export list=/etc/apt/sources.list.d/qu1x-dev.list
+
+printf "# Qu1x Deb\ndeb [signed-by=$keys] $repo\ndeb-src [signed-by=$keys] $repo\n" | sudo tee $list
+sudo curl -o $keys https://qu1x.dev/file/keyring.gpg
+
 sudo apt update
 sudo apt install huawei-wmi
+```
+
+Optionally, remove old keys imported via deprecated `apt-key`:
+
+```sh
+sudo apt-key del CCF5E9B44503D1AB
 ```
 
 ### Build
