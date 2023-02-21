@@ -1,3 +1,9 @@
+huawei-wmi (1.1.3) stable; urgency=medium
+
+  * Use dynamic user in favor of user `nobody`.
+
+ -- Rouven Spreckels <rs@qu1x.dev>  Tue, 21 Feb 2023 10:47:29 +0100
+
 huawei-wmi (1.1.2) stable; urgency=low
 
   * Add license file.
