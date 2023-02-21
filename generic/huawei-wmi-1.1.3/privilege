@@ -7,5 +7,5 @@
 [ -e "$DEF$cct" ] || cp -- "$WMI$cct" "$DEF"
 chmod g=u -- "$DEF$cct"
 
-chgrp huawei-wmi -- "$WMI$cct" "$WMI$FLS" "$WMI$KBD"
-chmod g=u -- "$WMI$cct" "$WMI$FLS" "$WMI$KBD"
+chgrp huawei-wmi -- "$WMI$cct" "$WMI$FLS" "$WMI$KLT"
+chmod g=u -- "$WMI$cct" "$WMI$FLS" "$WMI$KLT"
