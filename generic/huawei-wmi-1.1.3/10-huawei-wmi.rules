@@ -1,1 +1,1 @@
-SUBSYSTEM=="platform", DRIVER=="huawei-wmi", ACTION=="add", TAG+="systemd"
+SUBSYSTEM=="platform", DRIVER=="huawei-wmi", ACTION=="add", TAG+="systemd", ENV{SYSTEMD_WANTS}="huawei-wmi-privilege.service"
