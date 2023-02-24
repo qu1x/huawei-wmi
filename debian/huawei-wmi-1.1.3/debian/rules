@@ -8,5 +8,4 @@ override_dh_installinit:
 	dh_installinit --name=huawei-wmi-reinstate --no-scripts
 
 override_dh_systemd_enable:
-	dh_systemd_enable --name=huawei-wmi-privilege
 	dh_systemd_enable --name=huawei-wmi-reinstate

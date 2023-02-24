@@ -27,7 +27,7 @@ install: users
 	install $(SRC)reinstate $(LIB)
 	systemctl daemon-reload
 	systemctl unmask huawei-wmi-privilege huawei-wmi-reinstate
-	systemctl enable huawei-wmi-privilege huawei-wmi-reinstate
+	systemctl enable huawei-wmi-reinstate
 	udevadm control --reload-rules && udevadm trigger --action=add || true
 
 .PHONY: reconfigure
@@ -42,7 +42,7 @@ users:
 
 .PHONY: remove
 remove:
-	systemctl disable huawei-wmi-reinstate huawei-wmi-privilege || true
+	systemctl disable huawei-wmi-reinstate || true
 	rm --force $(DEF)$(CCT)
 	rmdir $(DEF) || true
 	rm --force $(UDEV)10-huawei-wmi.rules
