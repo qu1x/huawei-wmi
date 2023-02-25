@@ -6,12 +6,12 @@ Also reinstates keyboard backlight timeout and power mode unlock if supported.
 
 ## Why?
 
-As the Huawei WMI controller is known to forget above settings after some reboots or hibernation,
-this repository provides a udev rule and two systemd units to reinstate them as required. Still a
-surprising but expected behavior is that while the MateBook is powered off, there is nothing running
-which can reinstate the charge-thresholds after re-plugging the power supply or after a short power
-outage and hence it still might charge to 100 %. Therefore, it is recommended to unplug the power
-supply when powered off. Further peculiarities are documented in the [Linux on MateBook] guide.
+As the Huawei WMI controller is known to forget above settings after hibernation, a few reboots, or
+several hours of being powered off, this repository provides a udev rule and two systemd units to
+reinstate them as required. A surprising but expected behavior is that while the MateBook is powered
+off, there is nothing running which can reinstate the charge-thresholds and hence it still might
+charge to 100 %. Therefore, it is recommended to unplug the power supply when powered off. Further
+peculiarities are documented in the [Linux on MateBook] guide.
 
 ## How?
 
