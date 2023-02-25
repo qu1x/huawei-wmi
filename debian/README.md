@@ -1,6 +1,6 @@
 # huawei-wmi
 
-For a general description, see the repository [README.md](..).
+For a general description, see the top-level [README.md](../README.md).
 
 ## Debian Package
 
