@@ -5,7 +5,7 @@ Sets group write privileges and reinstates battery charge-thresholds.
 Also reinstates keyboard backlight timeout and power mode unlock if supported.
 
 As the Huawei WMI controller can forget above settings after power cycling or hibernation, this
-repository provides udev rules and systemd units to reinstate them. Still a surprising but expected
+repository provides a udev rule and systemd units to reinstate them. Still a surprising but expected
 behavior is that after re-plugging the power supply or a short power outage while the MateBook is
 powered off, there is nothing running which can reinstate the charge-thresholds and it will charge
 to 100 %. Therefore, it is recommended to unplug the power supply after powering it off. Further
