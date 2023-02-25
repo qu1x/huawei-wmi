@@ -1,12 +1,12 @@
 # huawei-wmi
 
-Sets group write privileges and reinstates battery charge-thresholds.
+For a general description, see the repository [README.md](..).
 
 ## Debian Package
 
-Tested on Debian Bullseye.
+This package has been tested on Debian Bullseye and can be installed via repository or manual build.
 
-### Repository
+### Install via Repository
 
 ```sh
 export repo='https://deb.qu1x.dev bullseye main'
@@ -26,14 +26,14 @@ Optionally, remove old keys imported via deprecated `apt-key`:
 sudo apt-key del CCF5E9B44503D1AB
 ```
 
-### Build
+### Install via Manual Build
 
-Requires `build-essential devscripts debhelper`.
+Manually building the package requires `build-essential devscripts debhelper`.
 
   * Build package: `make`
   * Install package: `sudo make install`
   * Remove package: `sudo make remove`
-  * Reconfigure installed package: `sudo make reconfigure`
+  * Reconfigure users of installed package: `sudo make reconfigure`
   * Clean package directory: `make clean`
   * Clean all: `make distclean`
   * Translate templates: `make translate`

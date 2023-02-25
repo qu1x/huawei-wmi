@@ -1,12 +1,17 @@
 # huawei-wmi
 
-Sets group write privileges and reinstates battery charge-thresholds.
+For a general description, see the repository [README.md](..).
 
 ## Generic Makefile
 
-Tested on Debian Buster but intended to work on many distributions.
+This Makefile has been tested on
+
+  * Debian Bullseye
+  * Arch Linux (253-1-arch)
+
+but intended to work on other distributions as well:
 
   * Install: `sudo make install`
   * Remove: `sudo make remove`
-  * Reconfigure then install: `sudo make reconfigure`
+  * Reconfigure users and reinstall: `sudo make reconfigure`
   * Clean users: `make clean`
