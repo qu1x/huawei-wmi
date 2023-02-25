@@ -15,7 +15,7 @@ fi
 
 if [ -e "$WMI$PUL" ]
 then
-	echo Old power unlock "$(cat -- $WMI$PUL)"
+	echo Old power mode unlock "$(cat -- $WMI$PUL)"
 	cp -- "$DEF$PUL" "$WMI"
-	echo New power unlock "$(cat -- $WMI$PUL)"
+	echo New power mode unlock "$(cat -- $WMI$PUL)"
 fi
