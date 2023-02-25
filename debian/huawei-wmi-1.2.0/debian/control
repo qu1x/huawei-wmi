@@ -13,3 +13,5 @@ Depends: ${misc:Depends}
 Recommends: matebook-applet (>= 2.1.4)
 Description: Huawei WMI Privilege & Reinstate
  Sets group write privileges and reinstates battery charge-thresholds.
+ .
+ Also reinstates keyboard backlight timeout and power mode unlock if supported.
