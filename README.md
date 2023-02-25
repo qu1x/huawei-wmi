@@ -11,6 +11,15 @@ powered off, there is nothing running which can reinstate the charge-thresholds 
 to 100 %. Therefore, it is recommended to unplug the power supply after powering it off. Further
 information is provided by the [Linux on MateBook] guide.
 
+The settings to be reinstated are stored in `/etc/default/huawei-wmi/` and the current settings of
+the kernel driver interface are mapped in `/sys/devices/platform/huawei-wmi/`. The udev rule will
+fire the static one-shot `huawei-wmi-privilege` service as soon as the kernel driver interface has
+been populated. It will set group write privileges for the members of the system group `huawei-wmi`
+and initialize non-existing settings in former directory with the current settings of latter
+directory. Afterwards, it will fire the non-static one-shot `huawei-wmi-reinstate` service which
+reinstates the settings by copying the files from former to latter directory. Latter service is
+refired when waking up from hibernation. Only non-static services can be enabled or disabled.
+
 This repository relies on the mainlined [kernel driver] and is supported by the cross-platform
 [MateBook applet] as well as the native [Gnome extension].
 
