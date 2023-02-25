@@ -1,3 +1,10 @@
+huawei-wmi (1.2.0) stable; urgency=medium
+
+  * Reinstate `kbdlight_timeout` and `power_unlock` if supported.
+  * Treat `huawei-wmi-privilege` as static service.
+
+ -- Rouven Spreckels <rs@qu1x.dev>  Sat, 25 Feb 2023 12:16:09 +0100
+
 huawei-wmi (1.1.3) stable; urgency=medium
 
   * Use dynamic user in favor of user `nobody`.
