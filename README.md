@@ -50,6 +50,36 @@ effect, the listed users have to be logged out. This is reliably achieved by reb
 [AUR]: https://aur.archlinux.org/packages/huawei-wmi
 [Egor Vorontsov]: https://github.com/egormanga
 
+## Troubleshooting
+
+Ensure your desktop user is a member of the system group `huawei-wmi`:
+
+```sh
+$ groups | xargs -n 1 | grep huawei-wmi
+huawei-wmi
+```
+
+Ensure your desktop user has write privileges for default and current settings:
+
+```sh
+$ echo 40 70 | tee {/etc/default,/sys/devices/platform}/huawei-wmi/charge_control_thresholds
+40 70
+```
+
+Ensure the charge capacity lies between above charge-thresholds:
+
+```sh
+$ cat /sys/class/power_supply/BAT?/capacity
+60 # for example
+```
+
+Ensure the battery is not charging:
+
+```sh
+$ cat /sys/class/power_supply/BAT?/status
+Not charging
+```
+
 ## License
 
 Licensed under [Fair].
