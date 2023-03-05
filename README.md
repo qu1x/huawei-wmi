@@ -66,7 +66,7 @@ $ echo 40 70 | tee {/etc/default,/sys/devices/platform}/huawei-wmi/charge_contro
 40 70
 ```
 
-Ensure the charge capacity lies between above charge-thresholds:
+Ensure the charge capacity lies between above charge-thresholds or choose them accordingly:
 
 ```sh
 $ cat /sys/class/power_supply/BAT?/capacity
@@ -79,6 +79,8 @@ Ensure the battery is not charging:
 $ cat /sys/class/power_supply/BAT?/status
 Not charging
 ```
+
+Note that the graphical Gnome/KDE charge status might be delayed by a few minutes.
 
 ## License
 
