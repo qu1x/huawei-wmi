@@ -80,7 +80,20 @@ $ cat /sys/class/power_supply/BAT?/status
 Not charging
 ```
 
-Note that the graphical Gnome/KDE charge status might be delayed by a few minutes.
+Note that above and especially the Gnome/KDE charge status might be delayed by a few minutes.
+
+### Smart Charge
+
+Newer models starting from 2020 feature a smart-charge mode which ignores any charge-thresholds if
+enabled. It might get enabled by updating the BIOS, starting PC Manager on Windows, or setting one
+of the thresholds to zero.
+
+Disable smart-charge mode which would otherwise ignore charge-thresholds:
+
+```sh
+$ echo 0x462848011503 | tee /sys/kernel/debug/huawei-wmi/arg
+0x462848011503
+```
 
 ## License
 
