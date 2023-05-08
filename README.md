@@ -93,7 +93,13 @@ Disable smart-charge mode which would otherwise ignore charge-thresholds:
 ```sh
 $ echo 0x462848011503 | tee /sys/kernel/debug/huawei-wmi/arg
 0x462848011503
+$ cat /sys/kernel/debug/huawei-wmi/call
+# ...
+$ cat /sys/kernel/debug/huawei-wmi/call # yes, twice
+# ...
 ```
+
+This basically enables home mode and hence sets charge-thresholds to `"40 70"`.
 
 ## License
 
