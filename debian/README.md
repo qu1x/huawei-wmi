@@ -4,7 +4,8 @@ For a general description, see the top-level [README.md](../README.md).
 
 ## Debian Package
 
-This package has been tested on Debian Bullseye and can be installed via repository or manual build.
+This package has been tested on Debian Bullseye and Bookworm and can be installed via repository or
+manual build.
 
 ### Install via Repository
 
