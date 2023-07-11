@@ -39,13 +39,15 @@ effect, the listed users have to be logged out. This is reliably achieved by reb
 
 ### Makefile
 
-  * [Generic](generic)
+  * [Generic]
 
 ### Packages
 
-  * [Debian](debian)
-  * [Arch Linux] published on [AUR] by [Egor Vorontsov]
+  * [Debian]
+  * [Arch Linux] published on [AUR] by [Egor Vorontsov] (**unmaintained**, use [Generic] instead)
 
+[Generic]: generic
+[Debian]: debian
 [Arch Linux]: https://github.com/egormanga/aur-huawei-wmi
 [AUR]: https://aur.archlinux.org/packages/huawei-wmi
 [Egor Vorontsov]: https://github.com/egormanga
