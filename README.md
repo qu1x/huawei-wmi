@@ -44,13 +44,12 @@ effect, the listed users have to be logged out. This is reliably achieved by reb
 ### Packages
 
   * [Debian]
-  * [Arch Linux] published on [AUR] by [Egor Vorontsov] (**unmaintained**, use [Generic] instead)
+  * [Arch Linux] maintained by [Ben Woodward]
 
 [Generic]: generic
 [Debian]: debian
-[Arch Linux]: https://github.com/egormanga/aur-huawei-wmi
-[AUR]: https://aur.archlinux.org/packages/huawei-wmi
-[Egor Vorontsov]: https://github.com/egormanga
+[Arch Linux]: https://aur.archlinux.org/packages/huawei-wmi
+[Ben Woodward]: https://github.com/Sacro
 
 ## Troubleshooting
 
