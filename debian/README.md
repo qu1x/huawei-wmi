@@ -4,13 +4,12 @@ For a general description, see the top-level [README.md](../README.md).
 
 ## Debian Package
 
-This package has been tested on Debian Bullseye and Bookworm and can be installed via repository or
-manual build.
+This package has been tested on Debian Bookworm and can be installed via repository or manual build.
 
 ### Install via Repository
 
 ```sh
-export repo='https://deb.qu1x.dev bullseye main'
+export repo='https://deb.qu1x.dev bookworm main'
 export keys=/usr/share/keyrings/qu1x-dev-archive-keyring.gpg
 export list=/etc/apt/sources.list.d/qu1x-dev.list
 
